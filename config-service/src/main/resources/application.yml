@@ -2,14 +2,22 @@ server:
   port: 8081
 
 spring:
+  application:
+    name: config-service
+  #profiles:
+    #active: native
   cloud:
     config:
       server:
         git:
           uri: https://github.com/DonMastra/digitallab-spring-cloud-services-demo.git
-          search-paths: config-data
+          searchPaths: config-data
           username: ${GIT_USER}
           password: ${GIT_PASSWORD}
+          default-label: main
+        #bootstrap: true
+        #composite:
+          #type: composite
   security:
     user:
       name: root
