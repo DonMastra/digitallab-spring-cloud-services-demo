@@ -16,6 +16,10 @@ server:
   error:
     include-message: always
     include-binding-errors: always
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8099/eureka/
 
 # Deprecated config when we had application.yml
 #spring:
