@@ -5,11 +5,13 @@ import academy.digitallab.store.shopping.entity.Invoice;
 import java.util.List;
 
 public interface InvoiceService {
-    public List<Invoice> findInvoiceAll();
+    List<Invoice> findInvoiceAll();
 
-    public Invoice createInvoice(Invoice invoice);
-    public Invoice updateInvoice(Invoice invoice);
-    public Invoice deleteInvoice(Invoice invoice);
+    Invoice createInvoice(Invoice invoice);
 
-    public Invoice getInvoice(Long id);
+    Invoice updateInvoice(Invoice invoice);
+
+    Invoice deleteInvoice(Invoice invoice);
+
+    Invoice getInvoice(Long id);
 }

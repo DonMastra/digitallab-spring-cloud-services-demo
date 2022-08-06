@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @FeignClient(name = "customer-service", fallback = CustomerHystrixFallbackFactory.class)
+@RequestMapping("/customers")
 public interface CustomerClient {
-
-    @GetMapping(value = "/customers/{id}")
-    public ResponseEntity<Customer> getCustomer(@PathVariable("id") long id);
+    @GetMapping(value = "/{id}")
+    ResponseEntity<Customer> getCustomer(@PathVariable("id") long id);
 }
