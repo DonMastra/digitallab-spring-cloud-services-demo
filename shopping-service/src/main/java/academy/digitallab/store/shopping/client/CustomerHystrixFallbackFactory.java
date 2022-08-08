@@ -12,7 +12,8 @@ public class CustomerHystrixFallbackFactory  implements CustomerClient{
                 .firstName("none")
                 .lastName("none")
                 .email("none")
-                .photoUrl("none").build();
+                .photoUrl("none")
+                .build();
         return ResponseEntity.ok(customer);
     }
 }
