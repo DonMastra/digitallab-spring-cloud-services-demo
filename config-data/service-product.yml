@@ -20,6 +20,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8099/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 # Deprecated config when we had application.yml
 #spring:
